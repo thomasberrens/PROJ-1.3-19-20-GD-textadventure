@@ -99,7 +99,7 @@ function giveLocation() {
   imageLocation.src = "media/" + images[currentLocation];
   myDirections = "mogelijke richtingen zijn: ";
   for (let i = 0; i < directions[currentLocation].length; i++) {
-    myDirections += directions[currentLocation][i] + " ";
+    myDirections += "<li>" + directions[currentLocation][i] + "</li>";
   }
   myPossibilities.innerHTML = myDirections;
 }
