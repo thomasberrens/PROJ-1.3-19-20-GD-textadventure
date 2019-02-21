@@ -44,8 +44,6 @@ myInput.addEventListener('keydown', getInput, false);
 
 function getInput(evt) {
   if (evt.key == "Enter") {
-
-
     let inputArray = myInput.value.split(" ");
     if (inputArray[0] == "ga") {
       if (directions[currentLocation].indexOf(inputArray[1]) != -1) {
@@ -73,7 +71,13 @@ function getInput(evt) {
     }
 
     if (inputArray[0] == "pak") {
-      console.log('ga wat pakken')
+      console.log('ga wat pakken');
+      myInput.value = "";
+    }
+
+    if (inputArray[0] == "gebruik"){
+      console.log('ga wat gebruiken');
+      myInput.value = "";
     }
   }
 }
