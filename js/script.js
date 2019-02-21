@@ -56,6 +56,7 @@ myInput.addEventListener('keydown', getInput, false);
 function getInput(evt) {
   if (evt.key == "Enter") {
     let inputArray = myInput.value.split(" ");
+    
     if (inputArray[0] == "ga") {
       if (directions[currentLocation].indexOf(inputArray[1]) != -1) {
         switch (inputArray[1]) {
@@ -90,6 +91,13 @@ function getInput(evt) {
       console.log('ga wat gebruiken');
       myInput.value = "";
     }
+
+    if (inputArray[0] != "ga" && inputArray[0] != "pak" && inputArray[0] != "gebruik" ){
+      feedback.innerHTML = "mogelijke commando's zijn: ga, pak, gebruik en help";
+      myInput.value = "";
+      setTimeout(removeFeedback, 4000);
+    }
+
   }
 }
 
