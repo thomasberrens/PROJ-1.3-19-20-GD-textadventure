@@ -31,65 +31,65 @@ images[8] = "room8.png";
 
 directions = [];
 directions[0] = ["oost"];
-directions[1]= ["west","zuid"];
-directions[2]= ["zuid"];
-directions[3]= ["oost"];
-directions[4]= ["noord","west","zuid"];
-directions[5]= ["zuid"];
-directions[6]= ["oost"];
-directions[7]= ["noord","west","oost"];
-directions[8]= ["noord","west"];
+directions[1] = ["west", "zuid"];
+directions[2] = ["zuid"];
+directions[3] = ["oost"];
+directions[4] = ["noord", "west", "zuid"];
+directions[5] = ["zuid"];
+directions[6] = ["oost"];
+directions[7] = ["noord", "west", "oost"];
+directions[8] = ["noord", "west"];
 
-myInput.addEventListener('keydown',getInput,false);
+myInput.addEventListener('keydown', getInput, false);
 
-function getInput(evt){
-  if(evt.key == "Enter"){
+function getInput(evt) {
+  if (evt.key == "Enter") {
 
 
-  let inputArray = myInput.value.split(" ");
-  if(inputArray[0]=="ga"){
-    if(directions[currentLocation].indexOf(inputArray[1])!=-1){
-      switch(inputArray[1]){
-        case "noord":
-              currentLocation -= 3;
-        break;
-        case "zuid":
-          currentLocation += 3;
-        break;
-        case "oost":
-          currentLocation += 1;
-        break;
-        case "west":
-          currentLocation -= 1;
-        break;
+    let inputArray = myInput.value.split(" ");
+    if (inputArray[0] == "ga") {
+      if (directions[currentLocation].indexOf(inputArray[1]) != -1) {
+        switch (inputArray[1]) {
+          case "noord":
+            currentLocation -= 3;
+            break;
+          case "zuid":
+            currentLocation += 3;
+            break;
+          case "oost":
+            currentLocation += 1;
+            break;
+          case "west":
+            currentLocation -= 1;
+            break;
+        }
+      } else {
+        feedback.innerHTML = "dat mag niet";
+        setTimeout(removeFeedback, 2000);
+
       }
-    } else {
-      feedback.innerHTML = "dat mag niet";
-      setTimeout(removeFeedback,2000);
-
+      giveLocation();
+      myInput.value = "";
     }
-    giveLocation();
-    myInput.value = "";
-  }
 
-  if(inputArray[0]=="pak"){
-    console.log('ga wat pakken')
+    if (inputArray[0] == "pak") {
+      console.log('ga wat pakken')
+    }
   }
 }
-}
 
-function giveLocation(){
+function giveLocation() {
   divLocation.innerHTML = locations[currentLocation];
   imageLocation.src = "media/" + images[currentLocation];
   myDirections = "mogelijke richtingen zijn: ";
-  for(let i = 0; i< directions[currentLocation].length;i++){
+  for (let i = 0; i < directions[currentLocation].length; i++) {
     myDirections += directions[currentLocation][i] + " ";
   }
   possebilities.innerHTML = myDirections;
 
 }
 
-function removeFeedback(){
+function removeFeedback() {
   feedback.innerHTML = "";
 }
 
