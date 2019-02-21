@@ -1,9 +1,9 @@
 const divLocation = document.getElementById('location');
-const myPossebilities = document.getElementById('possebilities');
-const myButton = document.getElementById('myButton');
+const myPossibilities = document.getElementById('possibilities');
 const myInput = document.getElementById('myInput');
 const feedback = document.getElementById('feedback');
 const imageLocation = document.getElementById('imageLocation');
+const myDescription = document.getElementById('description');
 
 let currentLocation = 4;
 
@@ -39,6 +39,17 @@ directions[5] = ["zuid"];
 directions[6] = ["oost"];
 directions[7] = ["noord", "west", "oost"];
 directions[8] = ["noord", "west"];
+
+descriptions = [];
+descriptions[0] = "u staat in een kantine";
+descriptions[1] = "u staat op een trap";
+descriptions[2] = "u heeft gewonnen";
+descriptions[3] = "u staat in de docentenkamer";
+descriptions[4] = "u staat in een gang";
+descriptions[5] = "u staat in het medialab";
+descriptions[6] = "u staat bij de toiletten";
+descriptions[7] = "u staat in een klaslokaal";
+descriptions[8] = "u staat in het examenlokaal";
 
 myInput.addEventListener('keydown', getInput, false);
 
@@ -84,13 +95,13 @@ function getInput(evt) {
 
 function giveLocation() {
   divLocation.innerHTML = locations[currentLocation];
+  myDescription.innerHTML = descriptions[currentLocation];
   imageLocation.src = "media/" + images[currentLocation];
   myDirections = "mogelijke richtingen zijn: ";
   for (let i = 0; i < directions[currentLocation].length; i++) {
     myDirections += directions[currentLocation][i] + " ";
   }
-  possebilities.innerHTML = myDirections;
-
+  myPossibilities.innerHTML = myDirections;
 }
 
 function removeFeedback() {
