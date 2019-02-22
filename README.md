@@ -1,4 +1,4 @@
-## Maquest
+## MaQuest
 gamedeveloper :[jouw naam]
 
 ### Korte omschrijving van de game
