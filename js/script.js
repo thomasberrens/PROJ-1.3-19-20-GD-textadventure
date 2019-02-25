@@ -20,15 +20,15 @@ locations[7] = "klaslokaal";
 locations[8] = "examenlokaal";
 
 images = [];
-images[0] = "room0.png";
-images[1] = "room1.png";
-images[2] = "room2.png";
-images[3] = "room3.png";
-images[4] = "room4.png";
-images[5] = "room5.png";
-images[6] = "room6.png";
-images[7] = "room7.png";
-images[8] = "room8.png";
+images[0] = "room0.jpg";
+images[1] = "room1.jpg";
+images[2] = "room2.jpg";
+images[3] = "room3.jpg";
+images[4] = "room4.jpg";
+images[5] = "room5.jpg";
+images[6] = "room6.jpg";
+images[7] = "room7.jpg";
+images[8] = "room8.jpg";
 
 directions = [];
 directions[0] = ["oost"];
