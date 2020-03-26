@@ -17,3 +17,10 @@ body{
   font-size: 30px;
   font-weight: bold;
 }
+
+.treasure
+{
+position: absolute;
+left: 50px;
+top: 150px;
+}
