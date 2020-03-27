@@ -45,14 +45,14 @@ directions[8] = ["noord", "west"];
 
 descriptions = [];
 descriptions[0] = ["u staat in een kantine. Hier zitten studenten te eten of computerspelletjes te doen", "", "",""];
-descriptions[1] = ["u staat op een trap naar de eerste etage. Om u heen lopen studenten omhoog en omlaag", "", "",""];
+descriptions[1] = ["u staat op een trap naar de eerste etage. Om u heen lopen studenten omhoog en omlaag", "Cat", "catTreasure.jpg",""];
 descriptions[2] = ["u heeft gewonnen", "", "",""];
 descriptions[3] = ["u staat in de lerarenkamer. De leraren eten hier hun lunch of drinken koffie of thee", "Laptop", "",""];
 descriptions[4] = ["u staat in de Gang. Studenten en leraren lopen richting de klaslokalen", "", "",""];
 descriptions[5] = ["u staat in het medialab. Hier kan geexperimenteerd worden met bijvoorbeeld virtual reality brillen", "", "",""];
-descriptions[6] = ["u staat bij de toiletten", "", "",""];
+descriptions[6] = ["u staat bij de toiletten", "Duck", "duckTreasure.jpg",""];
 descriptions[7] = ["u staat in een klaslokaal. De tafels staan recht achter elkaar en voorin is een projector en een smartboard", "", "",""];
-descriptions[8] = ["u staat in het examenlokaal. Hier zijn de vierdejaars studenten bezig met het voorbereiden van hun examen", "", "",""];
+descriptions[8] = ["u staat in het examenlokaal. Hier zijn de vierdejaars studenten bezig met het voorbereiden van hun examen", "Dog", "dogTreasure.png",""];
 
 myInput.addEventListener('keydown', getInput, false);
 
