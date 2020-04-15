@@ -1,5 +1,5 @@
 ## MaQuest
-gamedeveloper :[jouw naam]
+gamedeveloper :Thomas Berrens
 
 ### Korte omschrijving van de game
 ...
